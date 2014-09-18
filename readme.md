@@ -1,3 +1,21 @@
+# png-chunk-stream
+
+```
+npm install png-chunk-stream
+```
+Decode and Encode PNGs into objects of [chunks](http://www.w3.org/TR/PNG/#11Chunks) like this:
+```
+{ length: 13,
+  type: 'IHDR',
+  data: <Buffer 00 00 02 01 00 00 01 68 08 06 00 00 00>,
+  crc: <Buffer ce f5 28 6e> }
+```
+
+## Example
+
+Create some funky glitch art like this:
+
+```
 var fs = require('fs')
 var decoder = require('./').decode()
 var encoder = require('./').encode()
@@ -17,3 +35,4 @@ fs.createReadStream('test.png')
   }))
   .pipe(encoder)
   .pipe(fs.createWriteStream('out.png'))
+```
