@@ -1,5 +1,9 @@
 # png-chunk-stream
 
+A small simple helper for working with PNG files, inspired by [chunky-stream](https://www.npmjs.org/package/chunky-rice). 
+It is supposed to be lightweight and usable with browserify.
+There is another more complete module called [streampng](https://www.npmjs.org/package/streampng).
+
 ```
 npm install png-chunk-stream
 ```
