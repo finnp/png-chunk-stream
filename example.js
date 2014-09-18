@@ -2,7 +2,6 @@ var fs = require('fs')
 var decoder = require('./').decode()
 var encoder = require('./').encode()
 var through = require('through2')
-var crc32 = require('buffer-crc32')
 
 fs.createReadStream('test.png')
   .pipe(decoder)
@@ -10,7 +9,7 @@ fs.createReadStream('test.png')
     if(chunk.type === 'IHDR') {
       console.log('height', chunk.data.readUInt32BE(0))
       chunk.data.writeUInt32BE(512, 0)
-      chunk.crc = crc32(Buffer.concat([new Buffer(chunk.type), chunk.data]))
+      chunk.crc = null // recalculate
     }
     this.push(chunk)
     cb()
