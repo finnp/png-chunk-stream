@@ -23,7 +23,7 @@ calculated from the `data` attribute.
 
 Create some funky glitch art like this:
 
-```
+```js
 var fs = require('fs')
 var decoder = require('./').decode()
 var encoder = require('./').encode()
