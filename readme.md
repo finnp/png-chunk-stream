@@ -47,7 +47,8 @@ fs.createReadStream('test.png')
 ## CLI
 
 You can also install the module globally with the `-g` flag. This will
-add a `png-chunk` script with the commands `encode` and `decode`.
+add a `png-chunk` script with the commands `encode` and `decode`. The buffers
+will be encoded as `base64`.
 
 ```
 $ png-chunk decode < test.png | head -2
