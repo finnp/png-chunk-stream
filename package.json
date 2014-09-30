@@ -3,14 +3,20 @@
   "version": "1.0.1",
   "description": "Decode and Encode PNG chunks",
   "main": "index.js",
+  "bin": {
+    "png-chunk": "./cli.js"
+  },
   "dependencies": {
     "buffer-crc32": "^0.2.3",
     "buffer-equal": "0.0.1",
-    "inherits": "^2.0.1"
+    "inherits": "^2.0.1",
+    "ndjson": "^1.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concat-stream": "^1.4.6"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [
     "png",
