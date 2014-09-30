@@ -1,4 +1,7 @@
 # png-chunk-stream
+Windows | Mac/Linux
+------- | ---------
+[![Windows Build status](http://img.shields.io/appveyor/ci/finnp/png-chunk-stream.svg)](https://ci.appveyor.com/project/finnp/png-chunk-stream/branch/master) | [![Build Status](https://travis-ci.org/finnp/png-chunk-stream.svg?branch=master)](https://travis-ci.org/finnp/png-chunk-stream)
 
 A small simple helper for working with PNG files, inspired by [chunky-stream](https://www.npmjs.org/package/chunky-rice). 
 It is supposed to be lightweight and usable with browserify.
