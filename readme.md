@@ -43,3 +43,16 @@ fs.createReadStream('test.png')
   .pipe(encoder)
   .pipe(fs.createWriteStream('out.png'))
 ```
+
+## CLI
+
+You can also install the module globally with the `-g` flag. This will
+add a `png-chunk` script with the commands `encode` and `decode`.
+
+```
+$ png-chunk decode < test.png | head -2
+{"length":13,"type":"IHDR","data":"AAACAQAAAWgIBgAAAA==","crc":"zvUobg=="}
+{"length":25,"type":"tEXt","data":"U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeQ==","crc":"ccllPA=="}
+$ png-chunk decode < test.png | png-chunk encode > out.png
+(this basically copes test.png to out.png)
+```
